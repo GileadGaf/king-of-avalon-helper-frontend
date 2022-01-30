@@ -1,7 +1,0 @@
-<section class="resource-details" *ngIf="loggedInUser">
-    <h2 [ngStyle]="{color:resource.color}" class="title" [innerText]="resource.name+': '+styledResourceAmountDisplay"></h2>
-    <app-resource-item-list  [resourceItems]="resourceItems$|async" [color]="resource.color"></app-resource-item-list>
-    <button class="btn" [ngStyle]="{backgroundColor:resource.color}" [routerLink]="['/edit/',resource.id]" >
-        Add new item
-    </button>
-</section>
