@@ -1,0 +1,18 @@
+@import 'helpers';
+.resource-item-edit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    form.edit-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        select,input{
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+         
+        }
+      
+    }
+}

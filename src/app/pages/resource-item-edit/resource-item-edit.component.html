@@ -1,0 +1,25 @@
+<section class="resource-item-edit">
+    <h2 class="title">Adding a new resource item</h2>
+    <form class="edit-form"  (ngSubmit)="onSaveResourceItem()">
+        <section class="resource-type">
+            Resource type:
+            <select name="resourceType" #resourceType="ngModel" [(ngModel)]="savedResourceItem.typeId"  (ngModelChange)="onChangeResourceType(resourceType)">
+                <option [ngValue]="1"  >Food</option>
+                <option [ngValue]="2">Wood</option>
+                <option [ngValue]="3">Iron</option>
+                <option [ngValue]="4">Silver</option>
+            </select>
+            <select name="resourceItemAmount" (change)="onChangeResourceItemType($event)"
+             >
+                <option *ngFor="let resourceItemType of resourceItemTypes$|async;let i=index" [selected]="(resourceItemType.amount===savedResourceItem.amount) ||(i===0)" [value]="resourceItemType.amount"  >
+                    {{resourceItemType.amountForDisplay}}
+                </option>
+            </select>
+        </section>
+            <label>
+                Quantity: <input type="number"  [(ngModel)]="savedResourceItem.quantity" name="resourceItemQuantity" min="0" >
+            </label>
+            <button class="btn">Save</button>
+
+    </form>
+</section>

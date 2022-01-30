@@ -1,0 +1,8 @@
+.resource-item-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,200px);
+    grid-auto-rows: 200px;
+    gap: 20px;
+    justify-content: center;
+
+}

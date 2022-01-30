@@ -1,0 +1,5 @@
+<ul class="resource-item-list">
+<li *ngFor="let resourceItem of resourceItems" [routerLink]="['/edit/',resourceItem.typeId,resourceItem._id]">
+    <app-resource-item-preview [resourceItem]="resourceItem" [color]="color" ></app-resource-item-preview>
+</li>
+</ul>
